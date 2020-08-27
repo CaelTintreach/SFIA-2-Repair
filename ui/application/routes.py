@@ -17,7 +17,7 @@ def prize():
 	db_data_set = prizesgiven(pool=letter.text, value=number.text, prize=prize.text)
 	db.session.add(db_data_set)
 	db.session.commit()
-	#rDat = prizesgiven.query.limit(1).all()
+	rDat = prizesgiven.query.limit(1).all()
 	#print(rDat)
 
 	return render_template('prize.html', title='Prize', prize=prize.text)
