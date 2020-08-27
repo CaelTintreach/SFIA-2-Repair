@@ -1,6 +1,6 @@
 from application import db
 
-class Prizes(db.method):
+class prizesgiven(db.method):
 	id = db.Column(db.Integer, primary_key=True)
 	pool = db.Column(db.String(20))
 	value = db.Column(db.String(20))
