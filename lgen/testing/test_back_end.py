@@ -9,12 +9,12 @@ class TestBase(TestCase):
 
 class TestView(TestBase):
 	def test_randomname(self):
-		response = self.client.get(url_for('user_name1'))
+		response = self.client.get(url_for('lGen'))
 		self.assertEqual(response.status_code, 200)
 
 class TestCountryName(TestBase):
 	def test_countrynames(self):
-		response = self.client.get(url_for('/prize/lgen'))
+		response = self.client.get(url_for('lGen'))
 		check = False
 		for item in ['A','B']:
 			if bytes.decode(response.data) == item:
