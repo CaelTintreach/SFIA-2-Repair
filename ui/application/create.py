@@ -1,4 +1,5 @@
 from application import db
-from application.models import Prizes
+from application.models import prizesgiven
 
+db.drop_all()
 db.create_all()

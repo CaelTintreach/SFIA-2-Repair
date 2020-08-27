@@ -42,5 +42,5 @@ services:
 volumes:
   prizedb:
 
-#export DATABASE_URI=mysql_pymysql://root:root@database:3306/prizedb
+#export DATABASE_URI=mysql+pymysql://root:root@database:3306/prizedb
 #export MYSQL_ROOT_PASSWORD=root
