@@ -17,8 +17,8 @@ class TestGen(TestBase):
 		response = self.client.post(
 			url_for('prize'),
 			data=dict(
-				number = "A",
-				letter = "A"
+				Number = "A",
+				Letter = "A"
 			),
 		)
 		self.assertIn(b"no prize!", response.data)
