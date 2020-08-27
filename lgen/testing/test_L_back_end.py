@@ -8,7 +8,7 @@ class TestBase(TestCase):
 		return app
 
 class TestView(TestBase):
-	def test_randomname(self):
+	def test_gview(self):
 		response = self.client.get(url_for('lGen'))
 		self.assertEqual(response.status_code, 200)
 
