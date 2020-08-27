@@ -40,7 +40,7 @@ services:
       MYSQL_DATABASE: prizedb
     volumes:
       - type: volume
-        source: database-volume
+        source: prizedb
         target: /var/lib/mysql
 
 volumes:
