@@ -13,21 +13,17 @@ services:
         published: 5002
         protocol: tcp
   pgen:
-    image: 127.0.0.1:4999/pgen
     build: ./pgen
     ports:
       - target: 5003
         published: 5003
         protocol: tcp
   ui:
-    image: 127.0.0.1:4999/ui
     build: ./ui
     ports:
       - target: 5000
         published: 5000
         protocol: tcp
-    #deploy:
-      #replicas: 2
     environment: 
       DATABASE_URI: ${DATABASE_URI}
   database:
