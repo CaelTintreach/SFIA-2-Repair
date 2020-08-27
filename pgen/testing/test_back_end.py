@@ -16,9 +16,13 @@ class TestGen(TestBase):
 	def test_home_view(self):
 		response = self.client.post(
 			url_for('prize'),
-			data=dict(
+			json=dict(
 				Number = "A",
 				Letter = "A"
 			),
 		)
 		self.assertIn(b"no prize!", response.data)
+		
+
+
+data = request.data.decode(utf-8)
