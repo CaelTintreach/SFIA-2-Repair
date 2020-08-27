@@ -1,6 +1,7 @@
 from application import app,db
 from application.models import Prizes
 
+db.drop_all()
 db.create_all()
 
 if __name__ == '__main__':
