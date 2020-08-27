@@ -22,7 +22,3 @@ class TestGen(TestBase):
 			),
 		)
 		self.assertIn(b"no prize!", response.data)
-		
-
-
-data = request.data.decode(utf-8)
