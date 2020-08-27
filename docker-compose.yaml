@@ -26,8 +26,8 @@ services:
       - target: 5000
         published: 5000
         protocol: tcp
-    deploy:
-      replicas: 2
+    #deploy:
+      #replicas: 2
     environment: 
       DATABASE_URI: ${DATABASE_URI}
   database:
