@@ -2,6 +2,10 @@ version: '3.7'
 services:
   lgen:
     build: ./lgen
+    image: caeltintreach/lgen:latest
+    deploy:
+      mode: replicated
+      replicas: 3
     ports:
       - target: 5001
         published: 5001
