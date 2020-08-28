@@ -12,18 +12,30 @@ services:
         protocol: tcp
   ngen:
     build: ./ngen
+    image: caeltintreach/ngen:latest
+    deploy:
+      mode: replicated
+      replicas: 3
     ports:
       - target: 5002
         published: 5002
         protocol: tcp
   pgen:
     build: ./pgen
+    image: caeltintreach/pgen:latest
+    deploy:
+      mode: replicated
+      replicas: 3
     ports:
       - target: 5003
         published: 5003
         protocol: tcp
   ui:
     build: ./ui
+    image: caeltintreach/ui:latest
+    deploy:
+      mode: replicated
+      replicas: 3
     ports:
       - target: 5000
         published: 5000
