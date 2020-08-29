@@ -42,6 +42,20 @@ services:
         protocol: tcp
     environment: 
       DATABASE_URI: ${DATABASE_URI}
+  nginx:
+    container_name: nginx
+    image: nginx
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: ./nginx/nginx.conf
+        target: /etc/nginx/nginx.conf
+    deploy:
+      mode: replicated
+      replicas: 3
   database:
     image: mysql:5.7
     ports:
