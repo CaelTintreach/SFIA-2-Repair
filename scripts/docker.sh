@@ -5,4 +5,5 @@ sudo usermod -aG docker $(whoami)
 #env MYSQL_ROOT_PASSWORD="${MYSQL_ROOT_PASSWORD}"
 docker-compose build
 docker-compose push 
-docker stack deploy -c docker-compose.yaml 
+#docker stack deploy -c docker-compose.yaml 
+docker-compose ps
