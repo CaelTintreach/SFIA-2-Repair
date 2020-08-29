@@ -45,7 +45,7 @@ services:
       DATABASE_URI: ${DATABASE_URI}
   nginx:
     container_name: nginx
-    image: nginx
+    image: nginx:latest
     ports:
       - target: 80
         published: 80
