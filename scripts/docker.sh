@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo groupadd -f docker
 sudo usermod -aG docker $(whoami)
 #env DATABASE_URI="${DATABASE_URI}"
 #env MYSQL_ROOT_PASSWORD="${MYSQL_ROOT_PASSWORD}"
