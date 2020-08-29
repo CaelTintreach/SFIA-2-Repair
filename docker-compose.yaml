@@ -32,6 +32,7 @@ services:
         protocol: tcp
   ui:
     build: ./ui
+    container_name: ui1
     image: caeltintreach/ui:latest
     deploy:
       mode: replicated
