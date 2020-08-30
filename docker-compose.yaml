@@ -49,6 +49,7 @@ services:
   nginx:
     container_name: nginx
     image: nginx
+    depends_on: ui
     ports:
     - target: 80
       published: 80
