@@ -19,6 +19,7 @@ sudo docker pull caeltintreach/lgen:latest
 sudo docker pull caeltintreach/ui:latest
 sudo docker pull caeltintreach/ngen:latest
 sudo docker pull caeltintreach/pgen:latest
+sudo docker pull nginx
 sudo docker stack deploy --compose-file docker-compose.yaml stacktest
 sudo docker images
 sudo docker container ls -a
