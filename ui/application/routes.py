@@ -2,7 +2,6 @@ from application import app
 from flask import render_template, jsonify
 import requests
 import json
-from application.models import prizesgiven
 
 @app.route('/', methods=['GET'])
 def home():
