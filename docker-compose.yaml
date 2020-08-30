@@ -35,10 +35,10 @@ services:
       - target: 5003
         published: 5003
         protocol: tcp
-  ui:
-    build: ./ui
-    container_name: ui
-    image: caeltintreach/ui:latest
+  ui1:
+    build: ./ui1
+    container_name: ui1
+    image: caeltintreach/ui1:latest
     deploy:
       mode: replicated
       replicas: 3
