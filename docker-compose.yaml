@@ -3,6 +3,8 @@ services:
   lgen:
     build: ./lgen
     container_name: lgen
+    environment: 
+      - DATABASE_URI="${DATABASE_URI}"
     image: caeltintreach/lgen:latest
     deploy:
       mode: replicated
