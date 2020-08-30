@@ -52,7 +52,7 @@ services:
     container_name: nginx
     image: nginx
     depends_on: 
-      - ui
+      - ui1
     ports:
     - target: 80
       published: 80
