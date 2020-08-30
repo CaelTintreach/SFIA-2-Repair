@@ -19,6 +19,10 @@ pipeline{
             steps{
                 sh './scripts/docker.sh'
             }
+        stage("Deploy via swarm") {
+            steps {
+                sh './scripts/deploy.sh'
+            }        
         }
     }
 }
