@@ -6,4 +6,4 @@ env DATABASE_URI="${DATABASE_URI}"
 env MYSQL_ROOT_PASSWORD="${MYSQL_ROOT_PASSWORD}"
 docker-compose build
 docker-compose push 
-docker stack deploy --compose-file docker-compose.yml stacktest
+docker stack deploy --compose-file docker-compose.yaml stacktest
