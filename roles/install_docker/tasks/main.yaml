@@ -55,7 +55,7 @@
 - name: "Adding the ansible user to the docker linux group."
   user:
     name: "{{ ansible_user }}"
-    name: Clifford
+    name: jenkins
     group: docker
 
 - name: "Ensure that the docker service is enabled on boot."
