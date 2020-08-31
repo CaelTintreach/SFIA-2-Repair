@@ -6,7 +6,7 @@ pipeline{
                 sh 'chmod +x ./scripts/*'
             }
         }
-        stage("Make Scripts Executable"){
+        stage("Run tests"){
             steps{
                 sh './scripts/test.sh'
             }
