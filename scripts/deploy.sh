@@ -12,12 +12,10 @@ EOF
 ssh node-1 << EOF
 pwd
 whoami
-export DATABASE_URI="$DATABASE_URI"
-export MYSQL_ROOT_PASSWORD="$MYSQL_ROOT_PASSWORD"
 git clone https://github.com/CaelTintreach/SFIA-2-Repair.git
 cd SFIA-2-Repair
 sudo docker pull caeltintreach/lgen:latest
-sudo docker pull caeltintreach/ui:latest
+sudo docker pull caeltintreach/ui1:latest
 sudo docker pull caeltintreach/ngen:latest
 sudo docker pull caeltintreach/pgen:latest
 sudo docker pull nginx
