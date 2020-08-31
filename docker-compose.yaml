@@ -3,8 +3,6 @@ services:
   lgen:
     build: ./lgen
     container_name: lgen
-    environment: 
-      - DATABASE_URI="${DATABASE_URI}"
     image: caeltintreach/lgen:latest
     deploy:
       mode: replicated
@@ -46,8 +44,6 @@ services:
       - target: 5000
         published: 5000
         protocol: tcp
-    environment: 
-      - DATABASE_URI="${DATABASE_URI}"
   nginx:
     container_name: nginx
     image: nginx
@@ -64,21 +60,3 @@ services:
     deploy:
       mode: replicated
       replicas: 3
-  database:
-    image: mysql:5.7
-    ports:
-      - target: 3306
-        published: 3306
-    environment: 
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: prizedb
-    volumes:
-      - type: volume
-        source: prizedb
-        target: /var/lib/mysql
-
-volumes:
-  prizedb:
-
-#export DATABASE_URI=mysql+pymysql://root:root@database:3306/prizedb
-#export MYSQL_ROOT_PASSWORD=root
