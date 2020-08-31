@@ -1,7 +1,4 @@
 #! /bin/bash
-pwd
-ls
-
 cd lgen
 pip3 install -r requirements.txt
 python3 -m pytest --cov app --cov-report term-missing

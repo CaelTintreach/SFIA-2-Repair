@@ -1,7 +1,4 @@
 #!/bin/bash
-pwd
-ls
-
 ssh node-1 << EOF
 git clone https://github.com/CaelTintreach/SFIA-2-Repair.git
 EOF
@@ -25,7 +22,5 @@ sudo docker container ls -a
 sudo docker stack services stacktest
 cd ..
 rm -r SFIA-2-Repair
-#sudo docker service scale stacktest_lgen=3
 sudo docker stack services stacktest
-ls
 EOF
