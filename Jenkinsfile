@@ -1,9 +1,5 @@
 pipeline{
     agent any
-    environment{
-        DATABASE_URI = credentials('DATABASE_URI')
-        MYSQL_ROOT_PASSWORD = credentials('DB_PASSWORD')
-    }
     stages{
         stage("Make Scripts Executable"){
             steps{
